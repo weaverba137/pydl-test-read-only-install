@@ -4,7 +4,7 @@ MAINTAINER Benjamin Alan Weaver <baweaver@lbl.gov>
 # Variables.
 #
 ENV testuser travis
-ENV branch temp-files-in-tests
+ENV branch master
 #
 # Add a non-privileged user.
 #
