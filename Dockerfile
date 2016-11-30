@@ -25,4 +25,4 @@ WORKDIR /home/${testuser}
 # Run test.
 #
 ENTRYPOINT ["/usr/bin/python"]
-CMD ["-c", "import pydl; pydl.test(verbose=True)"]
+CMD ["-c", "import pydl; pydl.test(args='-r w', verbose=True)"]
