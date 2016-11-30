@@ -13,7 +13,7 @@ RUN chown ${testuser}:${testuser} /home/${testuser}
 #
 # Tools needed
 #
-RUN apt-get update && apt-get -y install git python-scipy python-pip
+RUN apt-get update && apt-get -y install git python-scipy python-matplotlib python-pip
 RUN pip install astropy 
 RUN pip install git+https://github.com/weaverba137/pydl.git@${branch}
 #
@@ -25,4 +25,4 @@ WORKDIR /home/${testuser}
 # Run test.
 #
 ENTRYPOINT ["/usr/bin/python"]
-CMD ["-c", "import pydl; pydl.test()"]
+CMD ["-c", "import pydl; pydl.test(verbose=True)"]
